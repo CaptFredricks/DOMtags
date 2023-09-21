@@ -1,37 +1,33 @@
 <?php
 /**
- * The <input> DOMtag.
- * @since 1.0.0
+ * The <abbr> DOMtag.
+ * @since 1.0.1
  *
  * @package DomTags
  */
 namespace DomTags;
 
-class InputTag extends \DomTag implements DomTagInterface {
+class AbbrTag extends \DomTag implements DomTagInterface {
 	/**
 	 * Construct the DOMtag.
-	 * @since 1.0.0
+	 * @since 1.0.1
 	 *
 	 * @access public
 	 * @param array|null $args (optional) -- The list of arguments.
 	 * @return string
 	 */
 	public static function tag(?array $args = null): string {
-		return parent::constructTag('input', self::props(), $args);
+		return parent::constructTag('abbr', self::props(), $args);
 	}
 	
 	/**
 	 * The tag's props.
-	 * @since 1.0.0
+	 * @since 1.0.1
 	 *
 	 * @access public
 	 * @return array
 	 */
 	public static function props(): array {
-		return array_merge(
-			array('type'),
-			parent::ALWAYS_WL,
-			array('name', 'maxlength', 'pattern', 'value', 'placeholder', 'checked', 'disabled', 'required')
-		);
+		return parent::ALWAYS_WL;
 	}
 }

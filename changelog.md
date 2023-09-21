@@ -13,6 +13,23 @@
 - x.x.X (standard/minor release)
 - x.x.x.X (bug fix/emergency patch release)
 
+## Version 1.0.1 (2023-09-21)
+
+- Added support for the following tags and their parameters:
+  - `abbr`, `h1-h6`, `section`
+- Whitelisted the `pattern` and `required` parameters for the `input` tag
+- Dom tags can now be created without directly invoking the individual classes
+- New functions:
+  - `dom-tags.php` (`domTag`)
+
+**Modified files:**
+- class-dom-tag.php (M)
+- dom-tags.php
+- dom-tags/class-abbr-tag.php (N)
+- dom-tags/class-heading-tag.php (N)
+- dom-tags/class-input-tag.php (M)
+- dom-tags/class-section-tag.php (N)
+
 ## Version 1.0.0 (2023-02-15)
 
 - Set up core files and initial tags

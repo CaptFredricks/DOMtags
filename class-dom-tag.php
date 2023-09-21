@@ -38,6 +38,7 @@ class DomTag {
 					switch($key) {
 						case 'checked':
 						case 'disabled':
+						case 'required':
 						case 'selected':
 							$tag .= $value ? ' ' . $key : '';
 							break;
