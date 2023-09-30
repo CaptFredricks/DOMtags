@@ -3,6 +3,7 @@
  * The <div> DOMtag.
  * @since 1.0.0
  *
+ * @author Jace Fincham
  * @package DomTags
  */
 namespace DomTags;
@@ -31,6 +32,6 @@ class DivTag extends \DomTag implements DomTagInterface {
 		return array_merge(
 			parent::ALWAYS_WL,
 			array('style')
-		),
+		);
 	}
 }

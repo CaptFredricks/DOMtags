@@ -13,6 +13,19 @@
 - x.x.X (standard/minor release)
 - x.x.x.X (bug fix/emergency patch release)
 
+## Version 1.0.2 (2023-09-30)
+
+- Added author data to core files
+- Added support for the following tags and their parameters:
+  - `b`, `strong`
+
+**Bug fixes:**
+- The return statement of the `DivTag::props` method ends with a comma instead of a semicolon
+
+**Modified files:**
+- dom-tags/class-div-tag.php (M)
+- dom-tags/class-strong-tag.php (N)
+
 ## Version 1.0.1 (2023-09-21)
 
 - Added support for the following tags and their parameters:

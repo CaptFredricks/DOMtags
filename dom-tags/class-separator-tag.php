@@ -3,6 +3,7 @@
  * The <br|hr> DOMtag.
  * @since 1.0.0
  *
+ * @author Jace Fincham
  * @package DomTags
  */
 namespace DomTags;

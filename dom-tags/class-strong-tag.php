@@ -1,33 +1,33 @@
 <?php
 /**
- * The <h1-h6> DOMtag.
- * @since 1.0.1
+ * The <strong|b> DOMtag.
+ * @since 1.0.2
  *
  * @author Jace Fincham
  * @package DomTags
  */
 namespace DomTags;
 
-class HeadingTag extends \DomTag implements DomTagInterface {
+class StrongTag extends \DomTag implements DomTagInterface {
 	/**
 	 * The tag types.
-	 * @since 1.0.1
+	 * @since 1.0.2
 	 *
 	 * @access private
 	 * @var array
 	 */
-	private const TAG_TYPES = array('h1', 'h2', 'h3', 'h4', 'h5', 'h6');
+	private const TAG_TYPES = array('strong', 'b');
 	
 	/**
 	 * Construct the DOMtag.
-	 * @since 1.0.1
+	 * @since 1.0.2
 	 *
 	 * @access public
 	 * @param array|null $args (optional) -- The list of arguments.
 	 * @return string
 	 */
 	public static function tag(?array $args = null): string {
-		$type = self::TAG_TYPES[1];
+		$type = self::TAG_TYPES[0];
 		
 		if(isset($args['type']) && in_array($args['type'], self::TAG_TYPES, true))
 			$type = $args['type'];
@@ -37,7 +37,7 @@ class HeadingTag extends \DomTag implements DomTagInterface {
 	
 	/**
 	 * The tag's props.
-	 * @since 1.0.1
+	 * @since 1.0.2
 	 *
 	 * @access public
 	 * @return array

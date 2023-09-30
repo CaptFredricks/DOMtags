@@ -3,6 +3,7 @@
  * The <abbr> DOMtag.
  * @since 1.0.1
  *
+ * @author Jace Fincham
  * @package DomTags
  */
 namespace DomTags;

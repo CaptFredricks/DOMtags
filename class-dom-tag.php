@@ -3,6 +3,7 @@
  * Document Object Model tags, or DOMtags for short.
  * @since 1.0.0
  *
+ * @author Jace Fincham
  * @package DomTags
  */
 class DomTag {
