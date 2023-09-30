@@ -13,6 +13,14 @@
 - x.x.X (standard/minor release)
 - x.x.x.X (bug fix/emergency patch release)
 
+## Version 1.0.2.1 (2023-09-30)
+
+**Bug fixes:**
+- The new `strong` tag can't be used by the `domTag` function
+
+**Modified files:**
+- dom-tags.php (M)
+
 ## Version 1.0.2 (2023-09-30)
 
 - Added author data to core files

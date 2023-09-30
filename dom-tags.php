@@ -78,6 +78,9 @@ function domTag(string $tag_name, ?array $args = null): string {
 		case 'span':
 			return \DomTags\SpanTag::tag($args);
 			break;
+		case 'strong': case 'b':
+			return \DomTags\StrongTag::tag($args);
+			break;
 		case 'textarea':
 			return \DomTags\TextareaTag::tag($args);
 			break;
