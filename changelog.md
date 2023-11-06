@@ -13,6 +13,14 @@
 - x.x.X (standard/minor release)
 - x.x.x.X (bug fix/emergency patch release)
 
+## Version 1.0.3 (2023-11-06)
+
+**Bug fixes:**
+- The label arg for the central `constructTag` isn't properly constructed into a wrapping tag
+
+**Modified files:**
+- class-dom-tag.php
+
 ## Version 1.0.2.1 (2023-09-30)
 
 **Bug fixes:**

@@ -61,6 +61,7 @@ class DomTag {
 		
 		if(!empty($args['label'])) {
 			$label_props = self::labelProps();
+			$label = '<label';
 			
 			if(isset($args['label']['content'])) {
 				$content = $args['label']['content'];
@@ -69,9 +70,13 @@ class DomTag {
 				$content = '';
 			}
 			
-			$label = self::constructTag('label', $label_props, $args['label']);
+			foreach($args['label'] as $key => $value) {
+				if(in_array($key, $label_props, true) || str_starts_with($key, 'data-'))
+					$label .= ' ' . $key . '="' . $value . '"';
+			}
 			
-			$tag = $label . $tag . $content;
+			$label .= '>' . $tag . ($content ?? '') . '</label>';
+			$tag = $label;
 		}
 		
 		return $tag;
@@ -85,9 +90,9 @@ class DomTag {
 	 * @return array
 	 */
 	private static function labelProps(): array {
-		return array(array_merge(
+		return array_merge(
 			self::ALWAYS_WL,
 			array('for')
-		));
+		);
 	}
 }
