@@ -11,4 +11,4 @@ Place the files in a subdirectory of your root installation, such as an `include
 
 ## License
 Copyright (c) 2023 [Jace Fincham](https://jacefincham.com/)<br>
-ReallySimpleCMS is released under the [GNU General Public License v3.0](http://www.gnu.org/licenses/gpl-3.0.html).
+The DOMtags library is released under the [GNU General Public License v3.0](http://www.gnu.org/licenses/gpl-3.0.html).

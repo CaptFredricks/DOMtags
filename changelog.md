@@ -13,8 +13,16 @@
 - x.x.X (standard/minor release)
 - x.x.x.X (bug fix/emergency patch release)
 
+## Version 1.0.4.1 (2023-12-13)
+
+- Removed a reference to ReallySimpleCMS, a separate project, in the README
+
+**Modified files:**
+- README.md
+
 ## Version 1.0.4 (2023-12-13)
 
+- Tweaked a previous entry in the changelog
 - Whitelisted the global `style` property
 - Whitelisted the `autofocus` property for the `input` tag
 - Whitelisted the `alt` and `height` properties for the `img` tag
