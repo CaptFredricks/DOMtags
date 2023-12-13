@@ -14,7 +14,7 @@ class DomTag {
 	 * @access protected
 	 * @var array
 	 */
-	protected const ALWAYS_WL = array('id', 'class', 'title');
+	protected const ALWAYS_WL = array('id', 'class', 'style', 'title');
 	
 	/**
 	 * Construct a DOMtag.
@@ -40,6 +40,7 @@ class DomTag {
 						case 'checked':
 						case 'disabled':
 						case 'required':
+						case 'autofocus':
 						case 'selected':
 							$tag .= $value ? ' ' . $key : '';
 							break;
