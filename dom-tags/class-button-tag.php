@@ -29,6 +29,9 @@ class ButtonTag extends \DomTag implements DomTagInterface {
 	 * @return array
 	 */
 	public static function props(): array {
-		return self::ALWAYS_WL;
+		return array_merge(
+			parent::ALWAYS_WL,
+			array('type')
+		);
 	}
 }

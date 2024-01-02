@@ -13,6 +13,16 @@
 - x.x.X (standard/minor release)
 - x.x.x.X (bug fix/emergency patch release)
 
+## Version 1.0.5 (2024-01-02)
+
+- Whitelisted the `type` parameter for the `button` tag
+
+**Bug fixes:**
+- The `props` method of the `ButtonTag` class references a property of itself instead of the parent class
+
+**Modified files:**
+- dom-tags/class-button-tag.php (M)
+
 ## Version 1.0.4.1 (2023-12-13)
 
 - Removed a reference to ReallySimpleCMS, a separate project, in the README
