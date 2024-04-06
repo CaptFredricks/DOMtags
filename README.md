@@ -10,5 +10,5 @@ I will add support for additional tags/parameters as needed/requested.
 Place the files in a subdirectory of your root installation, such as an `includes` directory. The license and readme may be removed once installed.
 
 ## License
-Copyright (c) 2023 [Jace Fincham](https://jacefincham.com/)<br>
+Copyright (c) 2023-2024 [Jace Fincham](https://jacefincham.com/)<br>
 The DOMtags library is released under the [GNU General Public License v3.0](http://www.gnu.org/licenses/gpl-3.0.html).

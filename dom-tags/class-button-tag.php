@@ -30,8 +30,8 @@ class ButtonTag extends \DomTag implements DomTagInterface {
 	 */
 	public static function props(): array {
 		return array_merge(
-			parent::ALWAYS_WL,
-			array('type')
+			array('type'),
+			parent::ALWAYS_WL
 		);
 	}
 }

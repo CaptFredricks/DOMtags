@@ -13,6 +13,15 @@
 - x.x.X (standard/minor release)
 - x.x.x.X (bug fix/emergency patch release)
 
+## Version 1.0.6 (2024-04-05)
+
+- Updated the copyright year in the README
+- Rearranged the order of `button` params
+
+**Modified files:**
+- README.md (M)
+- dom-tags/class-button-tag.php (M)
+
 ## Version 1.0.5 (2024-01-02)
 
 - Whitelisted the `type` parameter for the `button` tag
@@ -28,7 +37,7 @@
 - Removed a reference to ReallySimpleCMS, a separate project, in the README
 
 **Modified files:**
-- README.md
+- README.md (M)
 
 ## Version 1.0.4 (2023-12-13)
 
