@@ -13,6 +13,25 @@
 - x.x.X (standard/minor release)
 - x.x.x.X (bug fix/emergency patch release)
 
+## Version 1.1.0 (2024-06-19)
+
+- Whitelisted the `placeholder` parameter for the `textarea` tag
+- Rewrote internal logic of the `domTag` function
+- Tweaked internal documentation
+- Added an index page for testing
+- Added a functions file and moved several files to a new `/includes` directory
+- Code cleanup
+
+**Bug fixes:**
+- The `input` tag's default `type` parameter (`type="text"`) isn't properly being generated
+
+**Modified files:**
+- includes/class-dom-tag.php
+- includes/dom-tags.php
+- includes/dom-tags/class-textarea-tag.php (M)
+- includes/functions.php (N)
+- index.php (N)
+
 ## Version 1.0.6 (2024-04-05)
 
 - Updated the copyright year in the README
