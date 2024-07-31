@@ -33,6 +33,7 @@ function domTag(string $tag_name, ?array $args = null): string {
 		'abbr' => \DomTags\AbbrTag::tag($args),
 		'br', 'hr' => \DomTags\SeparatorTag::tag($args),
 		'button' => \DomTags\ButtonTag::tag($args),
+		'code' => \DomTags\CodeTag::tag($args),
 		'div' => \DomTags\DivTag::tag($args),
 		'em', 'i' => \DomTags\EmTag::tag($args),
 		'fieldset' => \DomTags\FieldsetTag::tag($args),

@@ -1,6 +1,6 @@
 <?php
 /**
- * Functions.
+ * DOMtag functions. This file can be removed in live environments providing there is already a method of autoloading classes.
  * @since 1.1.0
  *
  * @author Jace Fincham

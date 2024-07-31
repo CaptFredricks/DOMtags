@@ -13,6 +13,16 @@
 - x.x.X (standard/minor release)
 - x.x.x.X (bug fix/emergency patch release)
 
+## Version 1.1.1 (2024-07-31)
+
+- Added support for the `code` tag and its properties
+- Tweaked internal documentation
+
+**Modified files:**
+- includes/dom-tags.php (M)
+- includes/dom-tags/class-code-tag.php (N)
+- includes/functions.php (M)
+
 ## Version 1.1.0 (2024-06-19)
 
 - Whitelisted the `placeholder` parameter for the `textarea` tag
