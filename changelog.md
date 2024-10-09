@@ -13,6 +13,25 @@
 - x.x.X (standard/minor release)
 - x.x.x.X (bug fix/emergency patch release)
 
+## Version 1.1.2 (2024-08-05)
+
+- Tweaked README to include information about PHP requirements
+- Created a .gitignore file
+- Minor code cleanup
+- Added support for the following tags and their properties:
+  - `table`, `td`, `th`, `tr`
+
+**Modified files:**
+- .gitignore (N)
+- README.md
+- includes/dom-tags.php
+- includes/dom-tags/class-div-tag.php (M)
+- includes/dom-tags/class-span-tag.php (M)
+- includes/dom-tags/class-table-cell-tag.php (N)
+- includes/dom-tags/class-table-row-tag.php (N)
+- includes/dom-tags/class-table-tag.php (N)
+- includes/dom-tags/interface-dom-tag.php (M)
+
 ## Version 1.1.1 (2024-07-31)
 
 - Added support for the `code` tag and its properties

@@ -29,9 +29,6 @@ class DivTag extends \DomTag implements DomTagInterface {
 	 * @return array
 	 */
 	public static function props(): array {
-		return array_merge(
-			parent::ALWAYS_WL,
-			array('style')
-		);
+		return parent::ALWAYS_WL;
 	}
 }

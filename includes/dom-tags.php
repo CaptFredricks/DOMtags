@@ -23,7 +23,8 @@ function domTag(string $tag_name, ?array $args = null): string {
 		'h3', 'h4',
 		'h5', 'h6',
 		'ol', 'ul',
-		'strong', 'b'
+		'strong', 'b',
+		'td', 'th'
 	);
 	
 	if(in_array($tag_name, $has_type, true)) $args['type'] = $tag_name;
@@ -50,7 +51,10 @@ function domTag(string $tag_name, ?array $args = null): string {
 		'select' => \DomTags\SelectTag::tag($args),
 		'span' => \DomTags\SpanTag::tag($args),
 		'strong', 'b' => \DomTags\StrongTag::tag($args),
+		'table' => \DomTags\TableTag::tag($args),
+		'td', 'th' => \DomTags\TableCellTag::tag($args),
 		'textarea' => \DomTags\TextareaTag::tag($args),
+		'tr' => \DomTags\TableRowTag::tag($args),
 		default => 'Invalid tag!'
 	};
 }

@@ -1,29 +1,29 @@
 <?php
 /**
- * The <span> DOMtag.
- * @since 1.0.0
+ * The <table> DOMtag.
+ * @since 1.1.2
  *
  * @author Jace Fincham
  * @package DomTags
  */
 namespace DomTags;
 
-class SpanTag extends \DomTag implements DomTagInterface {
+class TableTag extends \DomTag implements DomTagInterface {
 	/**
 	 * Construct the DOMtag.
-	 * @since 1.0.0
+	 * @since 1.1.2
 	 *
 	 * @access public
 	 * @param array|null $args (optional) -- The list of arguments.
 	 * @return string
 	 */
 	public static function tag(?array $args = null): string {
-		return parent::constructTag('span', self::props(), $args);
+		return parent::constructTag('table', self::props(), $args);
 	}
 	
 	/**
 	 * The tag's props.
-	 * @since 1.0.0
+	 * @since 1.1.2
 	 *
 	 * @access public
 	 * @return array
