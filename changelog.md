@@ -13,6 +13,13 @@
 - x.x.X (standard/minor release)
 - x.x.x.X (bug fix/emergency patch release)
 
+## Version 1.1.4.1 (2024-10-15)
+
+- Untracked a file in `.gitignore`
+
+**Modified files:**
+- .gitignore
+
 ## Version 1.1.4 (2024-10-15)
 
 - Renamed `DomTag` class to `DomTags`
