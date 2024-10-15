@@ -13,6 +13,13 @@
 - x.x.X (standard/minor release)
 - x.x.x.X (bug fix/emergency patch release)
 
+## Version 1.1.4.2 (2024-10-15)
+
+- Incremented version
+
+**Modified files:**
+- n/a
+
 ## Version 1.1.4.1 (2024-10-15)
 
 - Untracked a file in `.gitignore`
@@ -32,6 +39,9 @@
 ## Version 1.1.3.1 (2024-10-15)
 
 - Fixed `.gitignore` not removing untracked files
+
+**Modified files:**
+- n/a
 
 ## Version 1.1.3 (2024-10-15)
 
