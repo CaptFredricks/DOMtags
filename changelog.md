@@ -13,6 +13,10 @@
 - x.x.X (standard/minor release)
 - x.x.x.X (bug fix/emergency patch release)
 
+## Version 1.1.3.1 (2024-10-15)
+
+- Fixed `.gitignore` not removing untracked files
+
 ## Version 1.1.3 (2024-10-15)
 
 - Moved `dom-tags.php` to root directory and renamed it to `domtags.php`
