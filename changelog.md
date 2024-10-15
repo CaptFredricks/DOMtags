@@ -13,6 +13,16 @@
 - x.x.X (standard/minor release)
 - x.x.x.X (bug fix/emergency patch release)
 
+## Version 1.1.3 (2024-10-15)
+
+- Moved `dom-tags.php` to root directory and renamed it to `domtags.php`
+- Added some files to the `.gitignore` file
+
+**Modified files:**
+- .gitignore
+- README.md (M)
+- domtags.php (R)
+
 ## Version 1.1.2.1 (2024-10-14)
 
 - Added version constant to the core software and incremented version

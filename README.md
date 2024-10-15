@@ -7,7 +7,7 @@
 I will add support for additional tags/parameters as needed/requested.
 
 ## Installation
-Place the files in a subdirectory of your root installation, such as an `includes` directory. The license and readme may be removed once installed. DOMtags requires at least PHP 8.0 and will throw fatal errors on 7.4 or lower.
+Place the files in a subdirectory of your root installation, such as an `includes/modules` directory. The license and readme may be removed once installed. DOMtags requires at least PHP 8.0 and will throw fatal errors on 7.4 or lower.
 
 ## License
 Copyright (c) 2023-2024 [Jace Fincham](https://jacefincham.com/)<br>
