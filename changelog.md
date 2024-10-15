@@ -13,6 +13,13 @@
 - x.x.X (standard/minor release)
 - x.x.x.X (bug fix/emergency patch release)
 
+## Version 1.1.2.1 (2024-10-14)
+
+- Added version constant to the core software and incremented version
+
+**Modified files:**
+- includes/dom-tags.php
+
 ## Version 1.1.2 (2024-08-05)
 
 - Tweaked README to include information about PHP requirements

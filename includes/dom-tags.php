@@ -7,6 +7,9 @@
  * @package DomTags
  */
 
+// Current version
+define('DOMTAGS_VERSION', '1.1.2.1');
+
 /**
  * Construct a DOM tag.
  * @since 1.0.1
