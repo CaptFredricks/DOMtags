@@ -1,6 +1,6 @@
 <?php
 /**
- * The <tr> DOMtag.
+ * The <table> DOMtag.
  * @since 1.1.2
  *
  * @author Jace Fincham
@@ -8,7 +8,7 @@
  */
 namespace DomTags;
 
-class TableRowTag extends \DomTag implements DomTagInterface {
+class TableTag extends \DomTags implements DomTagInterface {
 	/**
 	 * Construct the DOMtag.
 	 * @since 1.1.2
@@ -18,7 +18,7 @@ class TableRowTag extends \DomTag implements DomTagInterface {
 	 * @return string
 	 */
 	public static function tag(?array $args = null): string {
-		return parent::constructTag('tr', self::props(), $args);
+		return parent::constructTag('table', self::props(), $args);
 	}
 	
 	/**

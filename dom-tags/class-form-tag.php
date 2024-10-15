@@ -1,6 +1,6 @@
 <?php
 /**
- * The <fieldset> DOMtag.
+ * The <form> DOMtag.
  * @since 1.0.0
  *
  * @author Jace Fincham
@@ -8,7 +8,7 @@
  */
 namespace DomTags;
 
-class FieldsetTag extends \DomTag implements DomTagInterface {
+class FormTag extends \DomTags implements DomTagInterface {
 	/**
 	 * Construct the DOMtag.
 	 * @since 1.0.0
@@ -18,7 +18,7 @@ class FieldsetTag extends \DomTag implements DomTagInterface {
 	 * @return string
 	 */
 	public static function tag(?array $args = null): string {
-		return parent::constructTag('fieldset', self::props(), $args);
+		return parent::constructTag('form', self::props(), $args);
 	}
 	
 	/**
@@ -29,6 +29,9 @@ class FieldsetTag extends \DomTag implements DomTagInterface {
 	 * @return array
 	 */
 	public static function props(): array {
-		return array();
+		return array_merge(
+			parent::ALWAYS_WL,
+			array('action', 'method', 'enctype', 'autocomplete')
+		);
 	}
 }

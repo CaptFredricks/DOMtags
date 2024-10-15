@@ -1,6 +1,6 @@
 <?php
 /**
- * The <button> DOMtag.
+ * The <p> DOMtag.
  * @since 1.0.0
  *
  * @author Jace Fincham
@@ -8,7 +8,7 @@
  */
 namespace DomTags;
 
-class ButtonTag extends \DomTag implements DomTagInterface {
+class ParagraphTag extends \DomTags implements DomTagInterface {
 	/**
 	 * Construct the DOMtag.
 	 * @since 1.0.0
@@ -18,7 +18,7 @@ class ButtonTag extends \DomTag implements DomTagInterface {
 	 * @return string
 	 */
 	public static function tag(?array $args = null): string {
-		return parent::constructTag('button', self::props(), $args);
+		return parent::constructTag('p', self::props(), $args);
 	}
 	
 	/**
@@ -29,9 +29,6 @@ class ButtonTag extends \DomTag implements DomTagInterface {
 	 * @return array
 	 */
 	public static function props(): array {
-		return array_merge(
-			array('type'),
-			parent::ALWAYS_WL
-		);
+		return parent::ALWAYS_WL;
 	}
 }

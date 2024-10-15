@@ -13,6 +13,15 @@
 - x.x.X (standard/minor release)
 - x.x.x.X (bug fix/emergency patch release)
 
+## Version 1.1.4 (2024-10-15)
+
+- Renamed `DomTag` class to `DomTags`
+- Restructured internal directories
+
+**Modified files:**
+- class-dom-tags.php (M)
+- dom-tags/(.\*) (M)
+
 ## Version 1.1.3.1 (2024-10-15)
 
 - Fixed `.gitignore` not removing untracked files

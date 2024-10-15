@@ -1,6 +1,6 @@
 <?php
 /**
- * The <a> DOMtag.
+ * The <span> DOMtag.
  * @since 1.0.0
  *
  * @author Jace Fincham
@@ -8,7 +8,7 @@
  */
 namespace DomTags;
 
-class AnchorTag extends \DomTag implements DomTagInterface {
+class SpanTag extends \DomTags implements DomTagInterface {
 	/**
 	 * Construct the DOMtag.
 	 * @since 1.0.0
@@ -18,7 +18,7 @@ class AnchorTag extends \DomTag implements DomTagInterface {
 	 * @return string
 	 */
 	public static function tag(?array $args = null): string {
-		return parent::constructTag('a', self::props(), $args);
+		return parent::constructTag('span', self::props(), $args);
 	}
 	
 	/**
@@ -29,9 +29,6 @@ class AnchorTag extends \DomTag implements DomTagInterface {
 	 * @return array
 	 */
 	public static function props(): array {
-		return array_merge(
-			parent::ALWAYS_WL,
-			array('href', 'target', 'rel')
-		);
+		return parent::ALWAYS_WL;
 	}
 }

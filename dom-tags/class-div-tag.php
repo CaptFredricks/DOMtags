@@ -1,6 +1,6 @@
 <?php
 /**
- * The <label> DOMtag.
+ * The <div> DOMtag.
  * @since 1.0.0
  *
  * @author Jace Fincham
@@ -8,7 +8,7 @@
  */
 namespace DomTags;
 
-class LabelTag extends \DomTag implements DomTagInterface {
+class DivTag extends \DomTags implements DomTagInterface {
 	/**
 	 * Construct the DOMtag.
 	 * @since 1.0.0
@@ -18,7 +18,7 @@ class LabelTag extends \DomTag implements DomTagInterface {
 	 * @return string
 	 */
 	public static function tag(?array $args = null): string {
-		return parent::constructTag('label', self::props(), $args);
+		return parent::constructTag('div', self::props(), $args);
 	}
 	
 	/**
@@ -29,9 +29,6 @@ class LabelTag extends \DomTag implements DomTagInterface {
 	 * @return array
 	 */
 	public static function props(): array {
-		return array_merge(
-			parent::ALWAYS_WL,
-			array('for')
-		);
+		return parent::ALWAYS_WL;
 	}
 }

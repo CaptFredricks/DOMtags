@@ -1,33 +1,33 @@
 <?php
 /**
- * The <br|hr> DOMtag.
- * @since 1.0.0
+ * The <td|th> DOMtag.
+ * @since 1.1.2
  *
  * @author Jace Fincham
  * @package DomTags
  */
 namespace DomTags;
 
-class SeparatorTag extends \DomTag implements DomTagInterface {
+class TableCellTag extends \DomTags implements DomTagInterface {
 	/**
 	 * The tag types.
-	 * @since 1.0.0
+	 * @since 1.1.2
 	 *
 	 * @access private
 	 * @var array
 	 */
-	private const TAG_TYPES = array('br', 'hr');
+	private const TAG_TYPES = array('td', 'th');
 	
 	/**
 	 * Construct the DOMtag.
-	 * @since 1.0.0
+	 * @since 1.1.2
 	 *
 	 * @access public
 	 * @param array|null $args (optional) -- The list of arguments.
 	 * @return string
 	 */
 	public static function tag(?array $args = null): string {
-		$type = self::TAG_TYPES[0];
+		$type = self::TAG_TYPES[1];
 		
 		if(isset($args['type']) && in_array($args['type'], self::TAG_TYPES, true))
 			$type = $args['type'];
@@ -37,12 +37,15 @@ class SeparatorTag extends \DomTag implements DomTagInterface {
 	
 	/**
 	 * The tag's props.
-	 * @since 1.0.0
+	 * @since 1.1.2
 	 *
 	 * @access public
 	 * @return array
 	 */
 	public static function props(): array {
-		return parent::ALWAYS_WL;
+		return array_merge(
+			parent::ALWAYS_WL,
+			array('colspan', 'rowspan')
+		);
 	}
 }

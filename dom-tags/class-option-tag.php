@@ -1,34 +1,34 @@
 <?php
 /**
- * The <code> DOMtag.
- * @since 1.1.1
+ * The <option> DOMtag.
+ * @since 1.0.0
  *
  * @author Jace Fincham
  * @package DomTags
  */
 namespace DomTags;
 
-class CodeTag extends \DomTag implements DomTagInterface {
+class OptionTag extends \DomTags implements DomTagInterface {
 	/**
 	 * Construct the DOMtag.
-	 * @since 1.1.1
+	 * @since 1.0.0
 	 *
 	 * @access public
 	 * @param array|null $args (optional) -- The list of arguments.
 	 * @return string
 	 */
 	public static function tag(?array $args = null): string {
-		return parent::constructTag('code', self::props(), $args);
+		return parent::constructTag('option', self::props(), $args);
 	}
 	
 	/**
 	 * The tag's props.
-	 * @since 1.1.1
+	 * @since 1.0.0
 	 *
 	 * @access public
 	 * @return array
 	 */
 	public static function props(): array {
-		return parent::ALWAYS_WL;
+		return array('value', 'selected');
 	}
 }

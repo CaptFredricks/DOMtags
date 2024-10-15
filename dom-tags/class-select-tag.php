@@ -1,6 +1,6 @@
 <?php
 /**
- * The <li> DOMtag.
+ * The <select> DOMtag.
  * @since 1.0.0
  *
  * @author Jace Fincham
@@ -8,7 +8,7 @@
  */
 namespace DomTags;
 
-class ListItemTag extends \DomTag implements DomTagInterface {
+class SelectTag extends \DomTags implements DomTagInterface {
 	/**
 	 * Construct the DOMtag.
 	 * @since 1.0.0
@@ -18,7 +18,7 @@ class ListItemTag extends \DomTag implements DomTagInterface {
 	 * @return string
 	 */
 	public static function tag(?array $args = null): string {
-		return parent::constructTag('li', self::props(), $args);
+		return parent::constructTag('select', self::props(), $args);
 	}
 	
 	/**
@@ -29,6 +29,9 @@ class ListItemTag extends \DomTag implements DomTagInterface {
 	 * @return array
 	 */
 	public static function props(): array {
-		return parent::ALWAYS_WL;
+		return array_merge(
+			parent::ALWAYS_WL,
+			array('name')
+		);
 	}
 }

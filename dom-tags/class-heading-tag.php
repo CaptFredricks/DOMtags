@@ -1,6 +1,6 @@
 <?php
 /**
- * The <section> DOMtag.
+ * The <h1-h6> DOMtag.
  * @since 1.0.1
  *
  * @author Jace Fincham
@@ -8,7 +8,16 @@
  */
 namespace DomTags;
 
-class SectionTag extends \DomTag implements DomTagInterface {
+class HeadingTag extends \DomTags implements DomTagInterface {
+	/**
+	 * The tag types.
+	 * @since 1.0.1
+	 *
+	 * @access private
+	 * @var array
+	 */
+	private const TAG_TYPES = array('h1', 'h2', 'h3', 'h4', 'h5', 'h6');
+	
 	/**
 	 * Construct the DOMtag.
 	 * @since 1.0.1
@@ -18,7 +27,12 @@ class SectionTag extends \DomTag implements DomTagInterface {
 	 * @return string
 	 */
 	public static function tag(?array $args = null): string {
-		return parent::constructTag('section', self::props(), $args);
+		$type = self::TAG_TYPES[1];
+		
+		if(isset($args['type']) && in_array($args['type'], self::TAG_TYPES, true))
+			$type = $args['type'];
+		
+		return parent::constructTag($type, self::props(), $args);
 	}
 	
 	/**

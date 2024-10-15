@@ -1,26 +1,26 @@
 <?php
 /**
- * The <strong|b> DOMtag.
- * @since 1.0.2
+ * The <ul|ol> DOMtag.
+ * @since 1.0.0
  *
  * @author Jace Fincham
  * @package DomTags
  */
 namespace DomTags;
 
-class StrongTag extends \DomTag implements DomTagInterface {
+class ListTag extends \DomTags implements DomTagInterface {
 	/**
 	 * The tag types.
-	 * @since 1.0.2
+	 * @since 1.0.0
 	 *
 	 * @access private
 	 * @var array
 	 */
-	private const TAG_TYPES = array('strong', 'b');
+	private const TAG_TYPES = array('ul', 'ol');
 	
 	/**
 	 * Construct the DOMtag.
-	 * @since 1.0.2
+	 * @since 1.0.0
 	 *
 	 * @access public
 	 * @param array|null $args (optional) -- The list of arguments.
@@ -37,7 +37,7 @@ class StrongTag extends \DomTag implements DomTagInterface {
 	
 	/**
 	 * The tag's props.
-	 * @since 1.0.2
+	 * @since 1.0.0
 	 *
 	 * @access public
 	 * @return array

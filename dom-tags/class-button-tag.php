@@ -1,34 +1,37 @@
 <?php
 /**
- * The <abbr> DOMtag.
- * @since 1.0.1
+ * The <button> DOMtag.
+ * @since 1.0.0
  *
  * @author Jace Fincham
  * @package DomTags
  */
 namespace DomTags;
 
-class AbbrTag extends \DomTag implements DomTagInterface {
+class ButtonTag extends \DomTags implements DomTagInterface {
 	/**
 	 * Construct the DOMtag.
-	 * @since 1.0.1
+	 * @since 1.0.0
 	 *
 	 * @access public
 	 * @param array|null $args (optional) -- The list of arguments.
 	 * @return string
 	 */
 	public static function tag(?array $args = null): string {
-		return parent::constructTag('abbr', self::props(), $args);
+		return parent::constructTag('button', self::props(), $args);
 	}
 	
 	/**
 	 * The tag's props.
-	 * @since 1.0.1
+	 * @since 1.0.0
 	 *
 	 * @access public
 	 * @return array
 	 */
 	public static function props(): array {
-		return parent::ALWAYS_WL;
+		return array_merge(
+			array('type'),
+			parent::ALWAYS_WL
+		);
 	}
 }

@@ -1,6 +1,6 @@
 <?php
 /**
- * The <form> DOMtag.
+ * The <br|hr> DOMtag.
  * @since 1.0.0
  *
  * @author Jace Fincham
@@ -8,7 +8,16 @@
  */
 namespace DomTags;
 
-class FormTag extends \DomTag implements DomTagInterface {
+class SeparatorTag extends \DomTags implements DomTagInterface {
+	/**
+	 * The tag types.
+	 * @since 1.0.0
+	 *
+	 * @access private
+	 * @var array
+	 */
+	private const TAG_TYPES = array('br', 'hr');
+	
 	/**
 	 * Construct the DOMtag.
 	 * @since 1.0.0
@@ -18,7 +27,12 @@ class FormTag extends \DomTag implements DomTagInterface {
 	 * @return string
 	 */
 	public static function tag(?array $args = null): string {
-		return parent::constructTag('form', self::props(), $args);
+		$type = self::TAG_TYPES[0];
+		
+		if(isset($args['type']) && in_array($args['type'], self::TAG_TYPES, true))
+			$type = $args['type'];
+		
+		return parent::constructTag($type, self::props(), $args);
 	}
 	
 	/**
@@ -29,9 +43,6 @@ class FormTag extends \DomTag implements DomTagInterface {
 	 * @return array
 	 */
 	public static function props(): array {
-		return array_merge(
-			parent::ALWAYS_WL,
-			array('action', 'method', 'enctype', 'autocomplete')
-		);
+		return parent::ALWAYS_WL;
 	}
 }

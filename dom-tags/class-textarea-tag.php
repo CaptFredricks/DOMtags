@@ -8,7 +8,7 @@
  */
 namespace DomTags;
 
-class TextareaTag extends \DomTag implements DomTagInterface {
+class TextareaTag extends \DomTags implements DomTagInterface {
 	/**
 	 * Construct the DOMtag.
 	 * @since 1.0.0

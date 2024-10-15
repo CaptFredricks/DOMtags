@@ -1,6 +1,6 @@
 <?php
 /**
- * The <ul|ol> DOMtag.
+ * The <a> DOMtag.
  * @since 1.0.0
  *
  * @author Jace Fincham
@@ -8,16 +8,7 @@
  */
 namespace DomTags;
 
-class ListTag extends \DomTag implements DomTagInterface {
-	/**
-	 * The tag types.
-	 * @since 1.0.0
-	 *
-	 * @access private
-	 * @var array
-	 */
-	private const TAG_TYPES = array('ul', 'ol');
-	
+class AnchorTag extends \DomTags implements DomTagInterface {
 	/**
 	 * Construct the DOMtag.
 	 * @since 1.0.0
@@ -27,12 +18,7 @@ class ListTag extends \DomTag implements DomTagInterface {
 	 * @return string
 	 */
 	public static function tag(?array $args = null): string {
-		$type = self::TAG_TYPES[0];
-		
-		if(isset($args['type']) && in_array($args['type'], self::TAG_TYPES, true))
-			$type = $args['type'];
-		
-		return parent::constructTag($type, self::props(), $args);
+		return parent::constructTag('a', self::props(), $args);
 	}
 	
 	/**
@@ -43,6 +29,9 @@ class ListTag extends \DomTag implements DomTagInterface {
 	 * @return array
 	 */
 	public static function props(): array {
-		return parent::ALWAYS_WL;
+		return array_merge(
+			parent::ALWAYS_WL,
+			array('href', 'target', 'rel')
+		);
 	}
 }

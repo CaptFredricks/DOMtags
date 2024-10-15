@@ -1,6 +1,6 @@
 <?php
 /**
- * The <span> DOMtag.
+ * The <fieldset> DOMtag.
  * @since 1.0.0
  *
  * @author Jace Fincham
@@ -8,7 +8,7 @@
  */
 namespace DomTags;
 
-class SpanTag extends \DomTag implements DomTagInterface {
+class FieldsetTag extends \DomTags implements DomTagInterface {
 	/**
 	 * Construct the DOMtag.
 	 * @since 1.0.0
@@ -18,7 +18,7 @@ class SpanTag extends \DomTag implements DomTagInterface {
 	 * @return string
 	 */
 	public static function tag(?array $args = null): string {
-		return parent::constructTag('span', self::props(), $args);
+		return parent::constructTag('fieldset', self::props(), $args);
 	}
 	
 	/**
@@ -29,6 +29,6 @@ class SpanTag extends \DomTag implements DomTagInterface {
 	 * @return array
 	 */
 	public static function props(): array {
-		return parent::ALWAYS_WL;
+		return array();
 	}
 }

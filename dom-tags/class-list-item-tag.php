@@ -1,29 +1,29 @@
 <?php
 /**
- * The <table> DOMtag.
- * @since 1.1.2
+ * The <li> DOMtag.
+ * @since 1.0.0
  *
  * @author Jace Fincham
  * @package DomTags
  */
 namespace DomTags;
 
-class TableTag extends \DomTag implements DomTagInterface {
+class ListItemTag extends \DomTags implements DomTagInterface {
 	/**
 	 * Construct the DOMtag.
-	 * @since 1.1.2
+	 * @since 1.0.0
 	 *
 	 * @access public
 	 * @param array|null $args (optional) -- The list of arguments.
 	 * @return string
 	 */
 	public static function tag(?array $args = null): string {
-		return parent::constructTag('table', self::props(), $args);
+		return parent::constructTag('li', self::props(), $args);
 	}
 	
 	/**
 	 * The tag's props.
-	 * @since 1.1.2
+	 * @since 1.0.0
 	 *
 	 * @access public
 	 * @return array

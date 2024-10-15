@@ -1,6 +1,6 @@
 <?php
 /**
- * The <select> DOMtag.
+ * The <input> DOMtag.
  * @since 1.0.0
  *
  * @author Jace Fincham
@@ -8,7 +8,7 @@
  */
 namespace DomTags;
 
-class SelectTag extends \DomTag implements DomTagInterface {
+class InputTag extends \DomTags implements DomTagInterface {
 	/**
 	 * Construct the DOMtag.
 	 * @since 1.0.0
@@ -18,7 +18,7 @@ class SelectTag extends \DomTag implements DomTagInterface {
 	 * @return string
 	 */
 	public static function tag(?array $args = null): string {
-		return parent::constructTag('select', self::props(), $args);
+		return parent::constructTag('input', self::props(), $args);
 	}
 	
 	/**
@@ -30,8 +30,9 @@ class SelectTag extends \DomTag implements DomTagInterface {
 	 */
 	public static function props(): array {
 		return array_merge(
+			array('type'),
 			parent::ALWAYS_WL,
-			array('name')
+			array('name', 'maxlength', 'pattern', 'value', 'placeholder', 'checked', 'disabled', 'required', 'autofocus')
 		);
 	}
 }

@@ -1,29 +1,29 @@
 <?php
 /**
- * The <p> DOMtag.
- * @since 1.0.0
+ * The <abbr> DOMtag.
+ * @since 1.0.1
  *
  * @author Jace Fincham
  * @package DomTags
  */
 namespace DomTags;
 
-class ParagraphTag extends \DomTag implements DomTagInterface {
+class AbbrTag extends \DomTags implements DomTagInterface {
 	/**
 	 * Construct the DOMtag.
-	 * @since 1.0.0
+	 * @since 1.0.1
 	 *
 	 * @access public
 	 * @param array|null $args (optional) -- The list of arguments.
 	 * @return string
 	 */
 	public static function tag(?array $args = null): string {
-		return parent::constructTag('p', self::props(), $args);
+		return parent::constructTag('abbr', self::props(), $args);
 	}
 	
 	/**
 	 * The tag's props.
-	 * @since 1.0.0
+	 * @since 1.0.1
 	 *
 	 * @access public
 	 * @return array

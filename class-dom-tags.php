@@ -6,7 +6,7 @@
  * @author Jace Fincham
  * @package DomTags
  */
-class DomTag {
+class DomTags {
 	/**
 	 * Props to always whitelist.
 	 * @since 1.0.0
