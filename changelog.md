@@ -13,6 +13,10 @@
 - x.x.X (standard/minor release)
 - x.x.x.X (bug fix/emergency patch release)
 
+## Version 1.2.0.2 (2024-02-06)
+
+- Incremented the version
+
 ## Version 1.2.0.1 (2024-02-05)
 
 - Updated the copyright and added release information in the README

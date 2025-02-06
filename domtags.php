@@ -8,7 +8,7 @@
  */
 
 // Current version
-define('DOMTAGS_VERSION', '1.2.0');
+define('DOMTAGS_VERSION', '1.2.0.2');
 
 /**
  * Construct a DOM tag.
