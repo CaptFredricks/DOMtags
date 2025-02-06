@@ -31,7 +31,7 @@ class AnchorTag extends \DomTags implements DomTagInterface {
 	public static function props(): array {
 		return array_merge(
 			parent::ALWAYS_WL,
-			array('href', 'target', 'rel')
+			array('href', 'download', 'target', 'rel')
 		);
 	}
 }

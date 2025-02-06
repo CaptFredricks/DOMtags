@@ -29,6 +29,6 @@ class OptionTag extends \DomTags implements DomTagInterface {
 	 * @return array
 	 */
 	public static function props(): array {
-		return array('value', 'selected');
+		return array('value', 'selected', 'disabled');
 	}
 }

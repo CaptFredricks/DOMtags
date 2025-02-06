@@ -29,6 +29,9 @@ class ListItemTag extends \DomTags implements DomTagInterface {
 	 * @return array
 	 */
 	public static function props(): array {
-		return parent::ALWAYS_WL;
+		return array_merge(
+			parent::ALWAYS_WL,
+			array('value')
+		);
 	}
 }

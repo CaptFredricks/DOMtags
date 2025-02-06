@@ -1,22 +1,22 @@
 <?php
 /**
- * The <br|hr> DOMtag.
- * @since 1.0.0
+ * The <audio|video> DOMtag.
+ * @since 1.2.0
  *
  * @author Jace Fincham
  * @package DomTags
  */
 namespace DomTags;
 
-class SeparatorTag extends \DomTags implements DomTagInterface {
+class MediaTag extends \DomTags implements DomTagInterface {
 	/**
 	 * The tag types.
-	 * @since 1.0.0
+	 * @since 1.2.0
 	 *
 	 * @access private
 	 * @var array
 	 */
-	private const TAG_TYPES = array('br', 'hr');
+	private const TAG_TYPES = array('audio', 'video');
 	
 	/**
 	 * The current tag type.
@@ -29,7 +29,7 @@ class SeparatorTag extends \DomTags implements DomTagInterface {
 	
 	/**
 	 * Construct the DOMtag.
-	 * @since 1.0.0
+	 * @since 1.2.0
 	 *
 	 * @access public
 	 * @param array|null $args (optional) -- The list of arguments.
@@ -46,12 +46,24 @@ class SeparatorTag extends \DomTags implements DomTagInterface {
 	
 	/**
 	 * The tag's props.
-	 * @since 1.0.0
+	 * @since 1.2.0
 	 *
 	 * @access public
 	 * @return array
 	 */
 	public static function props(): array {
-		return parent::ALWAYS_WL;
+		$props = array_merge(
+			parent::ALWAYS_WL,
+			array('src', 'preload', 'controls', 'autoplay', 'loop', 'muted')
+		);
+		
+		if(self::$tag_type === 'video') {
+			$props = array_merge(
+				$props,
+				array('poster', 'width', 'height')
+			);
+		}
+		
+		return $props;
 	}
 }

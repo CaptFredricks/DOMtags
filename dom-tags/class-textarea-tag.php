@@ -31,7 +31,7 @@ class TextareaTag extends \DomTags implements DomTagInterface {
 	public static function props(): array {
 		return array_merge(
 			parent::ALWAYS_WL,
-			array('name', 'cols', 'rows', 'placeholder')
+			array('name', 'placeholder', 'maxlength', 'cols', 'rows', 'readonly', 'disabled', 'required', 'autofocus')
 		);
 	}
 }

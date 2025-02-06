@@ -13,6 +13,56 @@
 - x.x.X (standard/minor release)
 - x.x.x.X (bug fix/emergency patch release)
 
+## Version 1.2.0 (2024-02-05)
+
+- Whitelisted the `download` prop for the `a` tag
+- Whitelisted the `name`, `value`, `disabled`, and `autofocus` props for the `button` tag
+  - Set the default `type` prop to `button`
+- Whitelisted the `name` and `disabled` props for the `fieldset` tag
+- Whitelisted the `name` and `novalidate` props for the `form` tag
+- Whitelisted the `loading` prop for the `img` tag
+- Whitelisted various props for the `input` tag
+  - Overhauled the internal code to allow selectively whitelisting props based on input type
+- Whitelisted the `value` prop for the `li` tag
+- Whitelisted the `type`, `start`, and `reversed` props for the `ol` tag
+- Whitelisted the `disabled` prop for the `option` tag
+- Whitelisted the `size`, `multiple`, `disabled`, `required`, and `autofocus` props for the `select` tag
+- Whitelisted the `maxlength`, `readonly`, `disabled`, `required`, and `autofocus` props for the `textarea` tag
+- Improved type checking for tags with interchangeable tag types
+  - Renamed the `type` prop to `tag_type` to avoid conflicting with certain tag props
+- Added additional checks for inputs based on their `type` prop
+- Added support for the following tags and their properties:
+  - `audio`, `iframe`, `link`, `meta`, `small`, `source`, `video`
+- New functions:
+  - `domtags.php` (`domTagPr`)
+
+**Modified files:**
+- class-dom-tags.php
+- dom-tags/class-anchor-tag.php (M)
+- dom-tags/class-button-tag.php
+- dom-tags/class-em-tag.php
+- dom-tags/class-fieldset-tag.php
+- dom-tags/class-form-tag.php
+- dom-tags/class-heading-tag.php
+- dom-tags/class-iframe-tag.php (N)
+- dom-tags/class-image-tag.php (M)
+- dom-tags/class-input-tag.php
+- dom-tags/class-link-tag.php (N)
+- dom-tags/class-list-item-tag.php (M)
+- dom-tags/class-list-tag.php
+- dom-tags/class-media-tag.php (N)
+- dom-tags/class-meta-tag.php (N)
+- dom-tags/class-option-tag.php (M)
+- dom-tags/class-script-tag.php (N)
+- dom-tags/class-select-tag.php
+- dom-tags/class-separator-tag.php
+- dom-tags/class-small-tag.php (N)
+- dom-tags/class-source-tag.php (N)
+- dom-tags/class-strong-tag.php
+- dom-tags/class-table-cell-tag.php
+- dom-tags/class-textarea-tag.php
+- domtags.php
+
 ## Version 1.1.4.2 (2024-10-15)
 
 - Incremented version

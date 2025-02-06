@@ -10,6 +10,26 @@ namespace DomTags;
 
 class ButtonTag extends \DomTags implements DomTagInterface {
 	/**
+	 * Types of inputs.
+	 * @since 1.2.0
+	 *
+	 * @access private
+	 * @var array
+	 */
+	private const TYPES = array(
+		'button', 'reset', 'submit'
+	);
+	
+	/**
+	 * The current type.
+	 * @since 1.2.0
+	 *
+	 * @access private
+	 * @var string
+	 */
+	private static $type;
+	
+	/**
 	 * Construct the DOMtag.
 	 * @since 1.0.0
 	 *
@@ -18,6 +38,18 @@ class ButtonTag extends \DomTags implements DomTagInterface {
 	 * @return string
 	 */
 	public static function tag(?array $args = null): string {
+		if(isset($args['type'])) {
+			if(!array_key_exists($args['type'], self::TYPES))
+				return 'Invalid button type!';
+		} else {
+			$args = array_merge(
+				array('type' => 'button'),
+				$args
+			);
+		}
+		
+		self::$type = $args['type'];
+		
 		return parent::constructTag('button', self::props(), $args);
 	}
 	
@@ -31,7 +63,8 @@ class ButtonTag extends \DomTags implements DomTagInterface {
 	public static function props(): array {
 		return array_merge(
 			array('type'),
-			parent::ALWAYS_WL
+			parent::ALWAYS_WL,
+			array('name', 'value', 'disabled', 'autofocus')
 		);
 	}
 }

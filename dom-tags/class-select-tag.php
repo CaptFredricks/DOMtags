@@ -31,7 +31,7 @@ class SelectTag extends \DomTags implements DomTagInterface {
 	public static function props(): array {
 		return array_merge(
 			parent::ALWAYS_WL,
-			array('name')
+			array('name', 'size', 'multiple', 'disabled', 'required', 'autofocus')
 		);
 	}
 }

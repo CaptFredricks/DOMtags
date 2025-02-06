@@ -31,7 +31,7 @@ class FormTag extends \DomTags implements DomTagInterface {
 	public static function props(): array {
 		return array_merge(
 			parent::ALWAYS_WL,
-			array('action', 'method', 'enctype', 'autocomplete')
+			array('name', 'action', 'method', 'enctype', 'autocomplete', 'novalidate')
 		);
 	}
 }

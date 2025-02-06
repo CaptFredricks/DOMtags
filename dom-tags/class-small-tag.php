@@ -1,37 +1,34 @@
 <?php
 /**
- * The <fieldset> DOMtag.
- * @since 1.0.0
+ * The <small> DOMtag.
+ * @since 1.2.0
  *
  * @author Jace Fincham
  * @package DomTags
  */
 namespace DomTags;
 
-class FieldsetTag extends \DomTags implements DomTagInterface {
+class SmallTag extends \DomTags implements DomTagInterface {
 	/**
 	 * Construct the DOMtag.
-	 * @since 1.0.0
+	 * @since 1.2.0
 	 *
 	 * @access public
 	 * @param array|null $args (optional) -- The list of arguments.
 	 * @return string
 	 */
 	public static function tag(?array $args = null): string {
-		return parent::constructTag('fieldset', self::props(), $args);
+		return parent::constructTag('small', self::props(), $args);
 	}
 	
 	/**
 	 * The tag's props.
-	 * @since 1.0.0
+	 * @since 1.2.0
 	 *
 	 * @access public
 	 * @return array
 	 */
 	public static function props(): array {
-		return array_merge(
-			parent::ALWAYS_WL,
-			array('name', 'disabled')
-		);
+		return parent::ALWAYS_WL;
 	}
 }

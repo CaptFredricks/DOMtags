@@ -29,17 +29,25 @@ class DomTags {
 	protected static function constructTag(string $name, array $props, ?array $args = null): string {
 		$tag = '<' . $name;
 		
-		if($name === 'input')
-			if(!array_key_exists('type', $args)) $tag .= ' type="text"';
-		
 		if(!is_null($args)) {
 			foreach($args as $key => $value) {
 				// Check whether the property has been whitelisted
 				if(in_array($key, $props, true) || str_starts_with($key, 'data-')) {
 					$tag .= match($key) {
-						'checked', 'disabled',
-						'required', 'autofocus',
-						'selected' => ($value ? ' ' . $key : ''),
+						// Multiple tags
+						'multiple', 'readonly', 'disabled', 'required', 'autofocus',
+						// <audio|video> tag
+						'controls', 'autoplay', 'loop', 'muted',
+						// <form> tag
+						'novalidate',
+						// <input> tag
+						'checked',
+						// <ol> tag
+						'reversed',
+						// <option> tag
+						'selected',
+						// <script> tag
+						'async', 'defer' => ($value ? ' ' . $key : ''),
 						default => (' ' . $key . '="' . $value . '"')
 					};
 				}
@@ -48,7 +56,7 @@ class DomTags {
 		
 		$tag .= '>';
 		
-		$self_closing = array('br', 'hr', 'img', 'input');
+		$self_closing = array('br', 'hr', 'img', 'input', 'link', 'meta');
 		
 		if(!in_array($name, $self_closing, true)) {
 			$tag .= $args['content'] ?? '';

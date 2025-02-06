@@ -31,7 +31,7 @@ class ImageTag extends \DomTags implements DomTagInterface {
 	public static function props(): array {
 		return array_merge(
 			parent::ALWAYS_WL,
-			array('src', 'alt', 'width', 'height')
+			array('src', 'loading', 'alt', 'width', 'height')
 		);
 	}
 }
