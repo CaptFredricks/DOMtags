@@ -13,6 +13,14 @@
 - x.x.X (standard/minor release)
 - x.x.x.X (bug fix/emergency patch release)
 
+## Version 1.2.0.1 (2024-02-05)
+
+- Updated the copyright and added release information in the README
+- Incremented the version
+
+**Modified files:**
+- README.md
+
 ## Version 1.2.0 (2024-02-05)
 
 - Whitelisted the `download` prop for the `a` tag
