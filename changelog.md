@@ -13,20 +13,35 @@
 - x.x.X (standard/minor release)
 - x.x.x.X (bug fix/emergency patch release)
 
-## Version 1.2.0.2 (2024-02-06)
+## Version 1.2.1 (2025-03-04)
 
+**General changes:**
+- n/a
+
+**Bug fixes:**
+- Tags using the `type` arg aren't being properly generated
+
+**Modified files:**
+- dom-tags/class-button-tag.php (M)
+- dom-tags/class-input-tag.php (M)
+
+## Version 1.2.0.2 (2025-02-06)
+
+**General changes:**
 - Incremented the version
 
-## Version 1.2.0.1 (2024-02-05)
+## Version 1.2.0.1 (2025-02-05)
 
+**General changes:**
 - Updated the copyright and added release information in the README
 - Incremented the version
 
 **Modified files:**
 - README.md
 
-## Version 1.2.0 (2024-02-05)
+## Version 1.2.0 (2025-02-05)
 
+**General changes:**
 - Whitelisted the `download` prop for the `a` tag
 - Whitelisted the `name`, `value`, `disabled`, and `autofocus` props for the `button` tag
   - Set the default `type` prop to `button`
@@ -77,6 +92,7 @@
 
 ## Version 1.1.4.2 (2024-10-15)
 
+**General changes:**
 - Incremented version
 
 **Modified files:**
@@ -84,6 +100,7 @@
 
 ## Version 1.1.4.1 (2024-10-15)
 
+**General changes:**
 - Untracked a file in `.gitignore`
 
 **Modified files:**
@@ -91,6 +108,7 @@
 
 ## Version 1.1.4 (2024-10-15)
 
+**General changes:**
 - Renamed `DomTag` class to `DomTags`
 - Restructured internal directories
 
@@ -100,6 +118,7 @@
 
 ## Version 1.1.3.1 (2024-10-15)
 
+**General changes:**
 - Fixed `.gitignore` not removing untracked files
 
 **Modified files:**
@@ -107,6 +126,7 @@
 
 ## Version 1.1.3 (2024-10-15)
 
+**General changes:**
 - Moved `dom-tags.php` to root directory and renamed it to `domtags.php`
 - Added some files to the `.gitignore` file
 
@@ -117,6 +137,7 @@
 
 ## Version 1.1.2.1 (2024-10-14)
 
+**General changes:**
 - Added version constant to the core software and incremented version
 
 **Modified files:**
@@ -124,6 +145,7 @@
 
 ## Version 1.1.2 (2024-08-05)
 
+**General changes:**
 - Tweaked README to include information about PHP requirements
 - Created a .gitignore file
 - Minor code cleanup
@@ -143,6 +165,7 @@
 
 ## Version 1.1.1 (2024-07-31)
 
+**General changes:**
 - Added support for the `code` tag and its properties
 - Tweaked internal documentation
 
@@ -153,6 +176,7 @@
 
 ## Version 1.1.0 (2024-06-19)
 
+**General changes:**
 - Whitelisted the `placeholder` parameter for the `textarea` tag
 - Rewrote internal logic of the `domTag` function
 - Tweaked internal documentation
@@ -172,6 +196,7 @@
 
 ## Version 1.0.6 (2024-04-05)
 
+**General changes:**
 - Updated the copyright year in the README
 - Rearranged the order of `button` params
 
@@ -181,6 +206,7 @@
 
 ## Version 1.0.5 (2024-01-02)
 
+**General changes:**
 - Whitelisted the `type` parameter for the `button` tag
 
 **Bug fixes:**
@@ -191,6 +217,7 @@
 
 ## Version 1.0.4.1 (2023-12-13)
 
+**General changes:**
 - Removed a reference to ReallySimpleCMS, a separate project, in the README
 
 **Modified files:**
@@ -198,6 +225,7 @@
 
 ## Version 1.0.4 (2023-12-13)
 
+**General changes:**
 - Tweaked a previous entry in the changelog
 - Whitelisted the global `style` property
 - Whitelisted the `autofocus` property for the `input` tag
@@ -210,6 +238,9 @@
 
 ## Version 1.0.3 (2023-11-06)
 
+**General changes:**
+- n/a
+
 **Bug fixes:**
 - The label arg for the central `constructTag` isn't properly constructed into a wrapping tag
 
@@ -217,6 +248,9 @@
 - class-dom-tag.php
 
 ## Version 1.0.2.1 (2023-09-30)
+
+**General changes:**
+- n/a
 
 **Bug fixes:**
 - The new `strong` tag can't be used by the `domTag` function
@@ -226,6 +260,7 @@
 
 ## Version 1.0.2 (2023-09-30)
 
+**General changes:**
 - Added author data to core files
 - Added support for the following tags and their properties:
   - `b`, `strong`
@@ -239,6 +274,7 @@
 
 ## Version 1.0.1 (2023-09-21)
 
+**General changes:**
 - Added support for the following tags and their properties:
   - `abbr`, `h1-h6`, `section`
 - Whitelisted the `pattern` and `required` properties for the `input` tag
@@ -256,6 +292,7 @@
 
 ## Version 1.0.0 (2023-02-15)
 
+**General changes:**
 - Set up core files and initial tags
 - The following tags and their properties are supported:
   - `a`, `br`, `button`, `div`, `em`, `fieldset`, `form`, `hr`, `i`, `img`, `input`, `label`, `li`, `ol`, `option`, `p`, `select`, `span`, `textarea`, `ul`

@@ -39,11 +39,13 @@ class ButtonTag extends \DomTags implements DomTagInterface {
 	 */
 	public static function tag(?array $args = null): string {
 		if(isset($args['type'])) {
-			if(!array_key_exists($args['type'], self::TYPES))
+			if(!in_array($args['type'], self::TYPES, true))
 				return 'Invalid button type!';
 		} else {
 			$args = array_merge(
-				array('type' => 'button'),
+				array(
+					'type' => 'button'
+				),
 				$args
 			);
 		}
